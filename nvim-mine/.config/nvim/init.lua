@@ -13,3 +13,5 @@
   },
  })
  require('gitsigns').setup()
+ require "user.lsp"
+ require "user.cmp"

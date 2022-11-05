@@ -48,8 +48,19 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim" -- Nice status line
   use "lukas-reineke/indent-blankline.nvim" -- Indent guidelines
   use "nvim-treesitter/nvim-treesitter" -- Nice highlighter
-  use "lewis6991/gitsigns.nvim"
-  
+  use "lewis6991/gitsigns.nvim" -- Nice signs for git
+  -- Completion plugins and LSP plugins
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
