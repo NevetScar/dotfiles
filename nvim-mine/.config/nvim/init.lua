@@ -9,7 +9,8 @@
     enable = true,
   },
   ensure_installed = {
-   'lua'
+   'lua',
+   'markdown'
   },
  })
  require('gitsigns').setup()
