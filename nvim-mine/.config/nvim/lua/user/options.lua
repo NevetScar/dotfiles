@@ -19,10 +19,10 @@ v.expandtab = true
 v.shiftwidth = 2
 v.tabstop = 2
 v.signcolumn = "yes"
-v.wrap = false
+v.wrap = true
 v.scrolloff = 8
 v.sidescrolloff = 8
-v.guifont = "monospace:h17" 
+v.guifont = "monospace:h17"
 v.shortmess:append "c"
 v.whichwrap:append "<,>,[,],h,l"
 v.iskeyword:append "-"
