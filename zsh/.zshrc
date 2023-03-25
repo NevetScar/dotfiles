@@ -126,6 +126,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # aliases
 alias ls="ls -al --color=auto"
+alias i="sudo aura"
 
 generateqr ()
 {
