@@ -13,6 +13,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 -- Language servers
 lspconfig.sumneko_lua.setup({})
 lspconfig.marksman.setup({})
+lspconfig.hls.setup({})
 
 -- LSP Keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
