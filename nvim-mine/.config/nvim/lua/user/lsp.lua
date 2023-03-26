@@ -3,13 +3,27 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 local lspconfig = require('lspconfig')
 local lsp_defaults = lspconfig.util.default_config
-
 lsp_defaults.capabilities = vim.tbl_deep_extend(
   'force',
   lsp_defaults.capabilities,
   require('cmp_nvim_lsp').default_capabilities()
 )
-
+local ht = require('haskell-tools')
+local def_opts = { noremap = true, silent = true}
+ht.setup {
+  hls = {
+    on_attach = function(client, bufnr)
+      local opts = vim.tbl_extend('keep', def_opts, { buffer = bufnr, })
+      vim.keymap.set('n', '<space>ca', vim.lsp.codelens.run, opts)
+      vim.keymap.set('n', '<space>hs', ht.hoogle.hoogle_signature, opts)
+    end,
+  },
+}
+vim.keymap.set('n', '<leader>rr', ht.repl.toggle, def_opts)
+vim.keymap.set('n', '<leader>rf', function ()
+  ht.repl.toggle(vim.api.nvim_buf_get_name(0))
+end, def_opts)
+vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 -- Language servers
 lspconfig.sumneko_lua.setup({})
 lspconfig.marksman.setup({})
