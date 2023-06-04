@@ -25,9 +25,9 @@ vim.keymap.set('n', '<leader>rf', function ()
 end, def_opts)
 vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 -- Language servers
-lspconfig.sumneko_lua.setup({})
-lspconfig.marksman.setup({})
+lspconfig.ls_lua.setup({})
 lspconfig.hls.setup({})
+lspconfig.prosemd_lsp.setup({})
 
 -- LSP Keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
