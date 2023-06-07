@@ -18,3 +18,15 @@ keymap("i", "<C-s>", "<ESC>:w<CR>", opts)
 keymap("x", "<C-s>", "<ESC>:w<CR>", opts)
 keymap("v", "<C-s>", "<ESC>:w<CR>", opts)
 keymap("n", "<C-s>", "<ESC>:w<CR>", opts)
+
+-- Switch buffers
+keymap("i", "<leader><C-i>", "<ESC>:bp<CR>", opts)
+keymap("n", "<leader><C-i>", "<ESC>:bp<CR>", opts)
+keymap("v", "<leader><C-i>", "<ESC>:bp<CR>", opts)
+keymap("x", "<leader><C-i>", "<ESC>:bp<CR>", opts)
+
+-- Close current buffer
+keymap("i", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
+keymap("n", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
+keymap("v", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
+keymap("x", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
