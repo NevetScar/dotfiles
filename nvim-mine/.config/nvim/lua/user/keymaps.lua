@@ -30,3 +30,13 @@ keymap("i", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
 keymap("n", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
 keymap("v", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
 keymap("x", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
+
+-- Clear highlight
+keymap("n", "<leader>/", "<ESC>:nohl<CR>", opts)
+
+-- Escape
+keymap("i", "<leader>fj", "<ESC>", opts)
+keymap("x", "<leader>fj", "<ESC>", opts)
+keymap("v", "<leader>fj", "<ESC>", opts)
+keymap("n", "<leader>fj", "<ESC>", opts)
+
