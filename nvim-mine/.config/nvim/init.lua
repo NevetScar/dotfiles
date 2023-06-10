@@ -10,7 +10,8 @@
   },
   ensure_installed = {
    'lua',
-   'markdown'
+   'markdown',
+   'haskell'
   },
  })
  require('gitsigns').setup()
