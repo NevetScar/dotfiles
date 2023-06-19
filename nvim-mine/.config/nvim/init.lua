@@ -11,7 +11,8 @@
   ensure_installed = {
    'lua',
    'markdown',
-   'haskell'
+   'haskell',
+   'bash'
   },
  })
  require('gitsigns').setup()

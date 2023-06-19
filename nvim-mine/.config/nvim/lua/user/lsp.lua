@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 -- Language servers
 lspconfig.marksman.setup({})
 lspconfig.hls.setup({})
-lspconfig.prosemd_lsp.setup({})
+lspconfig.bashls.setup({})
 
 -- LSP Keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
