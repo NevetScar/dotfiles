@@ -1,6 +1,6 @@
-local opts = { noremap = true, silent = true }
+  local opts = { noremap = true, silent = true }
 
-local keymap = vim.api.nvim_set_keymap
+  local keymap = vim.api.nvim_set_keymap
 
 --leader key mapped to space
 
@@ -24,12 +24,6 @@ keymap("i", "<leader><C-i>", "<ESC>:bp<CR>", opts)
 keymap("n", "<leader><C-i>", "<ESC>:bp<CR>", opts)
 keymap("v", "<leader><C-i>", "<ESC>:bp<CR>", opts)
 keymap("x", "<leader><C-i>", "<ESC>:bp<CR>", opts)
-
--- Close current buffer
-keymap("i", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
-keymap("n", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
-keymap("v", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
-keymap("x", "<leader>x", "<ESC>:bp<CR>:bd#<CR>", opts)
 
 -- Clear highlight
 keymap("n", "<leader>/", "<ESC>:nohl<CR>", opts)
