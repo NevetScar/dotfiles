@@ -1,6 +1,6 @@
-  local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 
-  local keymap = vim.api.nvim_set_keymap
+local keymap = vim.api.nvim_set_keymap
 
 --leader key mapped to space
 
@@ -34,3 +34,16 @@ keymap("x", "<leader>fj", "<ESC>", opts)
 keymap("v", "<leader>fj", "<ESC>", opts)
 keymap("n", "<leader>fj", "<ESC>", opts)
 
+local M = {}
+-- Select and replace next word
+function M.selectNextWord()
+  local word = vim.fn.input('Enter word: ')
+  local result = vim.fn.searchpos(word, "nw")
+  vim.api.nvim_win_set_cursor(0,{result[1],result[2]-1})
+  vim.cmd("normal! ve")
+  local keys = vim.api.nvim_replace_termcodes("g<C-h>",true,false,true)
+  vim.api.nvim_feedkeys(keys,'m',false)
+end
+vim.api.nvim_set_keymap('n', '<leader>s', ':lua require("keymaps").selectNextWord()<CR>', { noremap = true, silent = false })
+
+return M
