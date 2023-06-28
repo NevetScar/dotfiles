@@ -44,6 +44,6 @@ function M.selectNextWord()
   local keys = vim.api.nvim_replace_termcodes("g<C-h>",true,false,true)
   vim.api.nvim_feedkeys(keys,'m',false)
 end
-vim.api.nvim_set_keymap('n', '<leader>s', ':lua require("keymaps").selectNextWord()<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<leader>s', ':lua require("user/keymaps").selectNextWord()<CR>', { noremap = true, silent = false })
 
 return M
