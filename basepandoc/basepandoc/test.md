@@ -40,6 +40,9 @@ What shall I do to make this work on PDF?
 
 It works now!
 
+## To run the code
+pandoc --pdf-engine=pdflatex test.md -o test.pdf --citeproc
+
 Here is a footnote reference,[^1] and another.
 
 [My file](test.md) 
