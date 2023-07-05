@@ -54,6 +54,14 @@ lspconfig.lua_ls.setup {
     },
   },
 }
+lspconfig.ltex.setup {
+  settings = {
+    ltex = {
+      -- language = "en"
+      language = "es"
+    }
+  }
+}
 -- LSP Keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
