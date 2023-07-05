@@ -1,4 +1,4 @@
-local opts = { noremap = true, silent = true }
+local opts   = { noremap = true, silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
@@ -37,7 +37,7 @@ keymap("n", "<leader>fj", "<ESC>", opts)
 local M = {}
 -- Select and replace next word
 function M.selectNextWord()
-  local word = vim.fn.input('Enter word: ')
+  local word   = vim.fn.input('Enter word: ')
   local result = vim.fn.searchpos(word, "nw")
   vim.api.nvim_win_set_cursor(0,{result[1],result[2]-1})
   vim.cmd("normal! ve")
@@ -61,7 +61,6 @@ function M.alignT(t)
     table.insert(positionsofT,posix)
   end
   for _, markpos in pairs(positionsofT) do
-    vim.api.nvim_win_set_cursor(0,{markpos[1]-1,markpos[2]})
     vim.api.nvim_buf_set_text(0,markpos[1]-1,markpos[2]-1,markpos[1]-1,markpos[2]-1,{string.rep(' ',greatestcolumn - markpos[2])})
   end
 end
