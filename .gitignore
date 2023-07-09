@@ -1,4 +1,4 @@
 nvim-mine/.config/nvim/plugin/packer_compiled.lua
 nvim-mine/.config/nvim/lua/.luarc.json
 nvim-lazy/.config/nvim/lua/.luarc.json
-nvim-lazy/.config/nvim/.lazy-lock.json
+nvim-lazy/.config/nvim/lazy-lock.json
