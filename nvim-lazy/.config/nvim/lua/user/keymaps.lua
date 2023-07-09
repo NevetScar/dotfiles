@@ -87,6 +87,7 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts("Find files"))
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts("Grep"))
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts("Find buffers"))
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts("Find help tags"))
+keymap("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", opts("Show git status"))
 
 local M = {}
 -- Select and replace next word
