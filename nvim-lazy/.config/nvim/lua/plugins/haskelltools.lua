@@ -1,17 +1,16 @@
 return
 {
   "mrcjkb/haskell-tools.nvim",
-  config = function()
-    local ht = require('haskell-tools')
-    local opts   = function(desc_, buff)
-      return { noremap = true, silent = true, desc = desc_, buffer = buff}
-    end
-    local def_opts = function(desc_)
-      return { noremap = true, silent = true, desc = desc_}
-    end
-    ht.setup {
+  opts = {
       hls = {
         on_attach = function(client, bufnr)
+        local ht = require('haskell-tools')
+        local opts   = function(desc_, buff)
+          return { noremap = true, silent = true, desc = desc_, buffer = buff}
+        end
+        local def_opts = function(desc_)
+          return { noremap = true, silent = true, desc = desc_}
+        end
           vim.keymap.set('n', '<space>ca', vim.lsp.codelens.run, opts("Code lens", bufnr))
           vim.keymap.set('n', '<space>hs', ht.hoogle.hoogle_signature, opts("Hoogle signature", bufnr))
           vim.keymap.set('n', '<leader>rr', ht.repl.toggle, def_opts("Toggle repl"))
@@ -24,6 +23,5 @@ return
         end,
       },
     }
-  end
 }
 
