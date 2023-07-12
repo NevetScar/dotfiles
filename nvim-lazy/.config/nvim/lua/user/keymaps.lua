@@ -12,7 +12,7 @@ vim.g.maplocalleader = " "
 
 --Left explorer
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts("Trial explorer"))
+keymap("n", "<leader>e", ":Lex 30<cr>", opts("Left explorer"))
 
 -- Escape and save
 
@@ -81,8 +81,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', optss("Go to next diagnostic"))
   end
 })
--- Haskell tools
-keymap("n", "<leader>ea", "<cmd>lua require('haskell-tools').lsp.buf_eval_all()<cr>", opts("Eval all"))
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts("Find files"))
