@@ -1,9 +1,11 @@
 return
 {
   "mrcjkb/haskell-tools.nvim",
+  ft = {"haskell", "lhaskell"},
   opts = {
       hls = {
         on_attach = function(client, bufnr)
+        require('telescope').load_extension('ht')
         local ht = require('haskell-tools')
         local opts   = function(desc_, buff)
           return { noremap = true, silent = true, desc = desc_, buffer = buff}

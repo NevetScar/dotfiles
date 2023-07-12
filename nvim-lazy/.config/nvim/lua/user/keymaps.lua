@@ -81,6 +81,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', optss("Go to next diagnostic"))
   end
 })
+-- Haskell tools
+keymap("n", "<leader>ea", "<cmd>lua require('haskell-tools').lsp.buf_eval_all()<cr>", opts("Eval all"))
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts("Find files"))
@@ -90,6 +92,7 @@ keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts("Find help tags")
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts("Show git status"))
 keymap("n", "<leader>ds", "<cmd>Telescope lsp_document_symbols<cr>", opts("Document symbols"))
 keymap("n", "<leader>ws", "<cmd>Telescope lsp_workspace_symbols<cr>", opts("Workspace symbols"))
+keymap("n", "<leader>sk", "<cmd>Telescope ht hoogle_signature<cr>", opts("Search key in hoogle"))
 
 local M = {}
 -- Select and replace next word
