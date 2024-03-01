@@ -136,6 +136,7 @@ printf "$@" | curl -F-=\<- qrenco.de
 export PATH="$PATH:/home/ft/.ghcup/bin"
 export PATH="$PATH:/home/ft/.local/bin"
 export PATH="$PATH:/home/ft/.cabal/bin"
+export SUDO_EDITOR="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
