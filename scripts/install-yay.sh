@@ -8,5 +8,5 @@ else
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
-    rm -r ~/yay
+    rm -rf ~/yay
 fi
