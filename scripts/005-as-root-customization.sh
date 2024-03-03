@@ -17,7 +17,7 @@ systemctl enable systemd-timesyncd
 
 echo "Setting hostname"
 hostname=""
-while [-z $hostname]
+while [ -z $hostname ]
 do
   echo "Choose a hostname"
   read hostname
