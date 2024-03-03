@@ -23,5 +23,5 @@ do
   read hostname
 done
 hostnamectl set-hostname $hostname 
-echo "127.0.0.1 localhost\n127.0.1.1 $hostname" >> /etc/hosts
+echo -e "127.0.0.1 localhost\n127.0.1.1 $hostname" >> /etc/hosts
 hostnamectl
