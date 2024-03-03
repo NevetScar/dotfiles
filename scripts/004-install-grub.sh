@@ -9,5 +9,5 @@ done
 mkdir /boot/EFI
 mount $parti /boot/EFI
 grub-install --target=x86_64-efi –bootloader-id=grub_uefi –recheck
-grup-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 echo "please exit, and umount -a and reboot"
