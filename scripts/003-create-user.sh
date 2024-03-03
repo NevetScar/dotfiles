@@ -3,7 +3,7 @@
 echo "Changing root password: "
 passwd
 user1=""
-while [ -z "$parti" ]
+while [ -z "$user1" ]
 do
   echo "Choose a username"
   read user1
