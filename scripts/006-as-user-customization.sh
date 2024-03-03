@@ -16,7 +16,7 @@ else
     rm -rf ~/yay
 fi
 
-yay cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k --noconfirm
+yay -S cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k ttf-meslo-nerd-font-powerlevel10k --noconfirm 
 cd
 stow git
 stow nvim-lazy
