@@ -18,9 +18,9 @@ fi
 
 yay -Syu cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k ttf-meslo-nerd-font-powerlevel10k --noconfirm 
 cd
-stow git
-stow nvim-lazy
-stow zsh
+stow dotfiles/git
+stow dotfiles/nvim-lazy
+stow dotfiles/zsh
 systemctl enable cups
 systemctl start cups
 echo "You must reboot to get printer drivers to work"
