@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 parti=""
-while [-z $parti]
+while [ -z $parti ]
 do
   echo "Where is your efi partition: "
   read parti
