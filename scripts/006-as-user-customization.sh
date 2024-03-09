@@ -18,7 +18,7 @@ fi
 
 yay -Syu cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k ttf-meslo-nerd-font-powerlevel10k --noconfirm 
 chsh -s /usr/bin/zsh
-cd dotfiles
+cd ~/dotfiles
 stow git
 stow nvim-lazy
 stow zsh
