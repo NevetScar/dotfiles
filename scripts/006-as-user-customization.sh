@@ -1,7 +1,10 @@
 #! /usr/bin/bash
 
-systemctl start bluetooth
-systemctl enable bluetooth
+echo "deleting dotfiles for root"
+sudo rm -rf /root/dotfiles
+echo "Staring and enabling bluetooth"
+systemctl is-enabled bluetooth || systemctl enable bluetooth
+systemctl is-active bluetooth || systemctl start bluetooth
 
 
 echo "Install yay"
@@ -22,7 +25,8 @@ cd ~/dotfiles
 stow git
 stow nvim-lazy
 stow zsh
-systemctl enable cups
-systemctl start cups
+echo "starting and enabling cups"
+systemctl is-enabled cups || systemctl enable cups
+systemctl is-active cups || systemctl start cups
 echo "You must reboot to get printer drivers to work"
 

@@ -13,7 +13,7 @@ swapon -a
 
 echo "Setting timezone"
 timedatectl set-timezone America/Guatemala
-systemctl enable systemd-timesyncd
+systemctl is-enabled systemd-timesyncd || systemctl enable systemd-timesyncd
 
 echo "Setting hostname"
 hostname=""
