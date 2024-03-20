@@ -10,7 +10,6 @@ do
 done
 useradd -m -G wheel "$user1"
 passwd $user1 
-# echo "uncomment %Wheel ALL=(ALL) ALL"
-# EDITOR=nvim visudo
-echo '%wheel ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
+echo "uncomment %Wheel ALL=(ALL) ALL"
+EDITOR=nvim visudo
 
