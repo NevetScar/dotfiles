@@ -125,7 +125,7 @@ zle -N down-line-or-beginning-search
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # aliases
-alias ls="ls -al --color=auto"
+alias ls="ls -alh --color=auto"
 alias i="sudo aura"
 
 generateqr ()
