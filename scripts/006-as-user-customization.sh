@@ -19,7 +19,7 @@ else
     rm -rf ~/yay
 fi
 
-yay -Syu cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k ttf-meslo-nerd-font-powerlevel10k --noconfirm 
+yay -Syu cups gutenprint foomatic-db-gutenprint-ppds zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions starship ttf-firecode-nerd --noconfirm 
 chsh -s /usr/bin/zsh
 cd ~/dotfiles
 stow git
