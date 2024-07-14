@@ -1,13 +1,6 @@
 setopt extendedhistory
-neofetch
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
+# neofetch
+eval "$(starship init zsh)"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -122,11 +115,8 @@ zle -N down-line-or-beginning-search
 [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 # aliases
 alias ls="ls -alh --color=auto"
-alias i="sudo aura"
 
 generateqr ()
 {
@@ -138,5 +128,3 @@ export PATH="$PATH:/home/ft/.local/bin"
 export PATH="$PATH:/home/ft/.cabal/bin"
 export SUDO_EDITOR="nvim"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
