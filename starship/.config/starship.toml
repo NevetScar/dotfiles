@@ -1,0 +1,80 @@
+format = """
+[░▒▓](#a3aed2)\
+[  ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+$git_commit\
+[](fg:#394260 bg:#212736)\
+$fill\
+$nodejs\
+$rust\
+$golang\
+$php\
+$haskell\
+[](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+\n$character"""
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[fill]
+symbol = '.'
+style = "bold fg:#769ff0g"
+
+[directory]
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+truncate_to_repo = false
+truncation_length = 0
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_commit]
+style = "bg:#394260"
+only_detached = false
+tag_disabled = false
+format = '[[ $hash $tag ](fg:#769ff0 bg:#394260)]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+always_show_remote = true 
+format = '[[ $symbol $branch(:$remote_name) ](fg:#769ff0 bg:#394260)]($style)'
+
+[haskell]
+symbol = "󰲒"
+style = "bg:#212736"
+format = '[[ $symbol ($ghc_version ) ](fg:#769ff0 bg:#212736)]($style)'
+
+[git_status]
+style = "bg:#394260"
+conflicted = '🏳'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](fg:#769ff0 bg:#394260)'
+renamed = '👅'
+deleted = '🗑'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+[character]
+success_symbol = '[➜](bold purple)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
