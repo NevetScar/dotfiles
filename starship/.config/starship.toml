@@ -1,6 +1,7 @@
 format = """
 [░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
+$username\
+[ @](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
@@ -72,6 +73,13 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [character]
 success_symbol = '[➜](bold purple)'
+error_symbol = '[➜](bold red)'
+
+[username]
+show_always = true 
+disabled = false
+style_user = "bg:#a3aed2 fg:#090c0c"
+format = '[$user in ]($style)'
 
 [time]
 disabled = false
