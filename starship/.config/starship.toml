@@ -49,7 +49,7 @@ format = '[[ $hash $tag ](fg:#769ff0 bg:#394260)]($style)'
 symbol = ""
 style = "bg:#394260"
 always_show_remote = true 
-format = '[[ $symbol $branch(:$remote_name) ](fg:#769ff0 bg:#394260)]($style)'
+format = '[[ on   $symbol $branch(:$remote_name) ](fg:#769ff0 bg:#394260)]($style)'
 
 [haskell]
 symbol = "󰲒"
